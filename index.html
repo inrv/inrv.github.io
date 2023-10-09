@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <meta name="keywords" content="compositionality, scene graph, graph neural networks, visual relationships, deep learning, computer vision, stanford university, machine learning">
+
+<!--  <link rel="shortcut icon" href="visualgenome_logo.png">-->
+
+  <title>Compositionality in Computer Vision</title>
+  <meta name="description" content="Exploring compositional perception in computer vision">
+
+  <!--Open Graph Related Stuff-->
+  <meta property="og:title" content="Compositionality in Computer Vision"/>
+  <meta property="og:url" content="https://cicv.stanford.edu"/>
+  <meta property="og:description" content="Exploring compositional perception in computer vision ---"/>
+  <meta property="og:site_name" content="Compositionality in Computer Vision"/>
+<!--  <meta property="og:image" content="http://visualgenome.org/static/images/front-page/interconnected_images.png"/>-->
+<!--  <meta property="og:image:url" content="http://visualgenome.org/static/images/front-page/interconnected_images.png"/>-->
+
+  <!--Twitter Card Stuff-->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Compositionality in Computer Vision"/>
+<!--  <meta name="twitter:image" content="http://visualgenome.org/static/images/front-page/interconnected_images.png"/>-->
+  <meta name="twitter:url" content="https://cicv.stanford.edu"/>
+  <meta name="twitter:description" content="Exploring compositional perception in computer vision ---"/>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen,projection">
+</head>
+
+  <body>
+
+    <!-- <div class="top-strip"></div> -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://cicv.stanford.edu">Compositionality in Computer Vision</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar-main">
+      <ul class="nav navbar-nav">
+        <li>
+            <img href='stanford_logo.png' />
+            <!--  TODO: change logo  -->
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#overview">Overview</a>
+        </li>
+        <li>
+          <a href="#schedule">Schedule</a>
+        </li>
+        <li>
+          <a href="#speakers">Keynote Speakers</a>
+        </li>
+        <li>
+          <a href="#submission">Submission</a>
+        </li>
+        <li>
+          <a href="#organizers">Organizers</a>
+        </li>
+<!--        <li>-->
+<!--          <a href="#accepted">Accepted papers</a>-->
+<!--        </li>-->
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="page-content">
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h1><b>Compositionality in Computer Vision</b></h1>
+        <h3>June 15th, held in conjunction with <a href="http://cvpr2020.thecvf.com" target="_blank">CVPR 2020 Virtual</a></h3>
+<!--          <h3>Location: Room 318 B-C in at the COEX Convention Center</h3>-->
+<!--          <br />-->
+<!--          <img src='images/ezgif.com-video-to-gif.gif' />-->
+<!--  TODO: construct a teaser figure        -->
+<!--          <br />-->
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Overview -->
+    <p><a class="anchor" id="overview"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Overview</h2>
+        <p>People understand the world as a sum of its parts. Events are composed of other actions, objects can be
+          broken down into pieces, and this sentence is composed of a series of words. When presented with new concepts,
+          people can decompose the novelty into familiar parts. Our knowledge representation is naturally compositional.
+          Unfortunately, many of the underlying architectures that catalyze vision tasks generate representations that
+          are not compositional.</p>
+
+        <p>In our workshop, We will discuss compositionality in computer vision --- the notion that the representation
+          of the whole should be composed of the representation of its parts. As humans, our perception is intertwined
+          greatly by reasoning through composition: we understand a scene by components, a 3D shape by parts, an
+          activity by events, etc. We hypothesize that intelligent agents also need to develop compositional
+          understanding that is robust, generalizable, and powerful. In computer vision, there was a long-standing line
+          of work based on semantic compositionality such as part-based object recognition. Pioneering statistical
+          modeling approaches have built hierarchical feature representations for numerous vision tasks. And more
+          recently, recent works has demonstrated that concepts can be learned from only a few examples using a
+          compositional representation. As we move towards higher-level reasoning tasks, our workshop aims at revisiting
+          the idea and reflecting on the future directions of compositionality.</p>
+
+        <p>At the workshop, we would like to discuss the following questions. How should we represent composition in
+          scenes, videos, 3D spaces and robotics? How can human perception shed light on compositional understanding
+          algorithms? What are the benefits of exploring compositionality? What structures, architectures and learning
+          algorithms help models learn compositionality? How do we find the balance between compositional and
+          black-box-based understanding? What problems are there in the current compositional understanding methods and
+          how can we remedy them? What efforts should our community make in the future? What inductive biases can be
+          build into our architectures to improve few-shot learning, meta learning and compositional decomposition?</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Schedule -->
+    <p><a class="anchor" id="schedule"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Program Schedule</h2>
+      </div>
+    </div>
+
+    <div class="row slot-dark">
+      <div class="col-xs-12 col-sm-2">
+        Time (Pacific Time, UTC-7)
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Event
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        Title/Presenter
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Links
+      </div>
+    </div>
+
+    <div class="row slot">
+
+      <div class="col-xs-12 col-sm-2">
+        08:30 - 08:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Opening remarks
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <a href='https://ranjaykrishna.com' target="_blank"><strong>Ranjay Krishna</strong></a>,
+        <span style='color:#999999;'>Stanford University</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/WFo6dgxnLSw" target="_blank">video</a>]
+        [<a href="https://drive.google.com/file/d/1cR3DMMJ7mrWJqURhp4tcVVGdehzyspO3/view?usp=sharing" target="_blank">slides</a>]
+      </div>
+    </div>
+
+
+
+
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        08:45 - 10:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Keynote talk
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Composition in Concept, Space and Time</strong><br />
+        <a href='https://www.cs.cmu.edu/~abhinavg/' target="_blank"><strong>Abhinav Gupta</strong></a>,
+        <span style='color:#999999;'>Carnegie Mellon University</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/qYNrG2_5p2c" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+<!--        08:45 - 11:45-->
+      </div>
+      <div class="col-xs-12 col-sm-2">
+<!--        Keynote talk-->
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Meta-Learning Symmetries and Distributions</strong><br />
+        <a href='https://ai.stanford.edu/~cbfinn/' target="_blank"><strong>Chelsea Finn</strong></a>,
+        <span style='color:#999999;'>Stanford University</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/piN-mlFx6xM" target="_blank">video</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        10:15 - 11:00
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Keynote talk
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>A Roadmap for Activity and Event Recognition Models</strong><br />
+        <a href='http://olivalab.mit.edu/audeoliva.html' target="_blank"><strong>Aude Oliva</strong></a>,
+        <span style='color:#999999;'>Massachusetts Institute of Technology</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        11:00 - 11:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Keynote talk
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>What next in Computer Vision</strong><br />
+        <a href='https://people.eecs.berkeley.edu/~malik/' target="_blank"><strong>Jitendra Malik</strong></a>,
+        <span style='color:#999999;'>University of California, Berkeley</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://youtu.be/wmhDEBqmPCg" target="_blank">video</a>]
+        [<a href="https://cicv.stanford.edu/assets/slides/malik-slides-1.pdf" target="_blank">slides 1</a>]
+        [<a href="https://cicv.stanford.edu/assets/slides/malik-slides-2.pdf" target="_blank">slides 2</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        11:45 - 12:30
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Lunch break
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        12:30 - 13:00
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Poster session #1
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Training Neural Networks to Produce Compatible Features</strong><br />
+        <span style="color:#999999;font-weight: bold">Michael Gygli, Jasper Uijlings, Vittorio Ferrari</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="assets/papers/cicv_11_gygli.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+<!--        12:30 - 13:00-->
+      </div>
+      <div class="col-xs-12 col-sm-2">
+<!--        Poster session #1-->
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Exploring Latent Class Structures in Classification-By-Components Networks</strong><br />
+        <span style="color:#999999;font-weight: bold">Lars Holdijk</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="assets/papers/cicv_13_holdijk.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+<!--        12:30 - 13:00-->
+      </div>
+      <div class="col-xs-12 col-sm-2">
+<!--        Poster session #1-->
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Decomposing Image Generation into Layout Prediction and Conditional Synthesis</strong><br />
+        <span style="color:#999999;font-weight: bold">Anna Volokitin, Ender Konukoglu, Luc Van Gool</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="http://openaccess.thecvf.com/content_CVPRW_2020/papers/w23/Volokitin_Decomposing_Image_Generation_Into_Layout_Prediction_and_Conditional_Synthesis_CVPRW_2020_paper.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+<!--        12:30 - 13:00-->
+      </div>
+      <div class="col-xs-12 col-sm-2">
+<!--        Poster session #1-->
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Semantic Bottleneck Layers: Quantifying and Improving Inspectability of Deep Representations</strong><br>
+        <span style="color:#999999;font-weight: bold">Max Losch, Mario Fritz, Bernt Schiele</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="assets/papers/cicv_22_losch.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+          13:00 - 13:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+          Keynote talk
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Unsupervised Representations towards Counterfactual Predictions</strong><br />
+        <a href='https://www.cs.toronto.edu/~garg/' target="_blank"><strong>Animesh Garg</strong></a>,
+        <span style='color:#999999;'>University of Toronto</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://utoronto-my.sharepoint.com/:b:/g/personal/animesh_garg_utoronto_ca/ERfaEPcE6P9Omf1zDKzTuAoBnCndoZyh5gZJ_XvGow2Lpw?e=npXY5T" target="_blank">slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+          13:45 - 14:30
+      </div>
+      <div class="col-xs-12 col-sm-2">
+          Keynote talk
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Composing Humans and Objects in the 3D World</strong><br />
+        <a href='https://people.eecs.berkeley.edu/~kanazawa/' target="_blank"><strong>Angjoo Kanazawa</strong></a>,
+        <span style='color:#999999;'>University of California, Berkeley</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="https://cicv.stanford.edu/assets/slides/kanazawa-slides.pdf" target="_blank">slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        14:30 - 15:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Live panel discussion
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        Panelists:
+        <ul>
+          <li><strong>Jitendra Malik</strong></li>
+          <li><strong>Aude Oliva</strong></li>
+          <li><strong>Chelsea Finn</strong></li>
+          <li><strong>Animesh Garg</strong></li>
+          <li><strong>Angjoo Kanazawa</strong></li>
+        </ul>
+        Moderated by Ranjay Krishna
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        15:15 - 15:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Afternoon break
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        15:45 - 16:05
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Oral talk #1
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Compositional Convolutional Neural Networks: A Deep Architecture with Innate Robustness to Partial Occlusion</strong><br />
+        <span style='color:#999999;font-weight: bold'>Adam Kortylewski, Ju He, Qing Liu, Alan Yuille</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="assets/papers/cicv_24_kortylewski.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        16:05 - 16:25
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Oral talk #2
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>PaStaNet: Toward Human Activity Knowledge Engine</strong><br />
+        <span style='color:#999999;font-weight: bold'>Yong-Lu Li, Liang Xu, Xinpeng Liu, Xijie Huang, Yue Xu, Shiyi Wang, Hao-Shu Fang, Ze Ma, Mingyang Chen, Cewu Lu</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="assets/papers/cicv_23_li.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        16:25 - 16:45
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Oral talk #3
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Searching for Actions on the Hyperbole</strong><br />
+        <span style='color:#999999;font-weight: bold'>Teng Long, Pascal Mettes, Heng Tao Shen, Cees Snoek</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Long_Searching_for_Actions_on_the_Hyperbole_CVPR_2020_paper.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+        16:45 - 17:15
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Poster session #2
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Inferring Temporal Compositions of Actions Using Probabilistic Automata</strong><br />
+        <span style='color:#999999;font-weight: bold'>Rodrigo Santa Cruz, Anoop Cherian, Basura Fernando, Dylan Campbell, Stephen Gould</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="http://openaccess.thecvf.com/content_CVPRW_2020/papers/w23/Santa_Cruz_Inferring_Temporal_Compositions_of_Actions_Using_Probabilistic_Automata_CVPRW_2020_paper.pdf" target="_blank">paper</a>]
+        [<a href="https://youtu.be/CBE08zj3Vyw" target="_blank">video</a>]
+        [<a href="assets/slides/14-slides.pdf" target="_blank">slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot-colored">
+      <div class="col-xs-12 col-sm-2">
+<!--        16:45 - 17:15-->
+      </div>
+      <div class="col-xs-12 col-sm-2">
+<!--        Poster session #2-->
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <strong>Understanding Action Recognition in Still Images</strong><br />
+        <span style='color:#999999;font-weight: bold'>Deeptha Girish, Vineeta Singh, Anca Ralescu</span>
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        [<a href="http://openaccess.thecvf.com/content_CVPRW_2020/papers/w23/Girish_Understanding_Action_Recognition_in_Still_Images_CVPRW_2020_paper.pdf" target="_blank">paper</a>]
+        [<a href="http://cvpr20.com/compositionality-in-computer-vision/" target="_blank">video, slides</a>]
+      </div>
+    </div>
+
+    <div class="row slot">
+      <div class="col-xs-12 col-sm-2">
+        17:15 - 17:30
+      </div>
+      <div class="col-xs-12 col-sm-2">
+        Closing remarks
+      </div>
+      <div class="col-xs-12 col-sm-6">
+      </div>
+      <div class="col-xs-12 col-sm-2">
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Speakers -->
+    <p><a class="anchor" id="speakers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Keynote Speakers</h2>
+      </div>
+    </div>
+
+    <!-- Jitendra Malik -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        <div class="instructor">
+          <div class="instructorphoto"><img src="images/jitendra-malik.png"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <b><a href="https://people.eecs.berkeley.edu/~malik/" target="_blank">Jitendra Malik</a></b>
+        is Arthur J. Chick Professor in the Department of Electrical Engineering and Computer Science at the University
+        of California at Berkeley, where he also holds appointments in vision science, cognitive science and
+        Bioengineering. He received the PhD degree in Computer Science from Stanford University in 1985 following which
+        he joined UC Berkeley as a faculty member. He served as Chair of the Computer Science Division during 2002-2006,
+        and of the Department of EECS during 2004-2006. Jitendra's group has worked on computer vision, computational
+        modeling of biological vision, computer graphics and machine learning. Several well-known concepts and
+        algorithms arose in this work, such as anisotropic diffusion, normalized cuts, high dynamic range imaging and
+        shape contexts. He was awarded the Longuet-Higgins Award for “A Contribution that has Stood the Test of Time”
+        twice, in 2007 and 2008, received the PAMI Distinguished Researcher Award in computer vision in 2013 the K.S. Fu
+        prize in 2014, and the IEEE PAMI Helmholtz prize for two different papers in 2015. Jitendra Malik is a Fellow of
+        the IEEE, ACM, and the American Academy of Arts and Sciences, and a member of the National Academy of Sciences
+        and the National Academy of Engineering.
+      </div>
+    </div>
+    <br />
+
+    <!-- Aude Oliva -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+          <div class="instructor">
+            <div class="instructorphoto"><img src="images/aude-oliva.png"></div>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <b><a href="http://olivalab.mit.edu/audeoliva.html" target="_blank">Aude Oliva</a></b>
+        has a dual French baccalaureate in Physics and Mathematics and a B.Sc. in Psychology (minor in Philosophy). She
+        received two M.Sc. degrees –in Experimental Psychology, and in Cognitive Science and a Ph.D from the Institut
+        National Polytechnique of Grenoble, France. She joined the MIT faculty in the Department of Brain and Cognitive
+        Sciences in 2004, the MIT Computer Science and Artificial Intelligence Laboratory - CSAIL - in 2012, the MIT-IBM
+        Watson AI Lab in 2017, and the leadership of the Quest for Intelligence in 2018. She is also affiliated with the
+        Athinoula A. Martinos Imaging Center at the McGoven Institute for Brain Research MIT, and the MIT CSAIL
+        Initiative "Systems That Learn". She is the MIT Executive Director of the MIT-IBM Watson AI Lab, and the
+        Executive Director of the MIT Quest for Intelligence, a new MIT-wide initiative which seeks to discover the
+        foundations of human and machine intelligence and deliver transformative new technology for humankind. She is
+        currently on the Scientific Advisory Board of the Allen Institute for Artificial Intelligence.
+      </div>
+    </div>
+    <br />
+
+    <!-- Abhinav Gupta -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+          <div class="instructor">
+            <div class="instructorphoto"><img src="https://www.cs.cmu.edu/~abhinavg/projects/me.jpg"></div>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <b><a href="https://www.cs.cmu.edu/~abhinavg/" target="_blank">Abhinav Gupta</a></b>
+        is an Associate Professor at the Robotics Institute, Carnegie Mellon University. and Research Manager at
+        Facebook AI Research (FAIR). Abhinav's research focuses on scaling up learning by building self-supervised,
+        lifelong and interactive learning systems. Specifically, he is interested in how self-supervised systems can
+        effectively use data to learn visual representation, common sense and representation for actions in robots.
+        Abhinav is a recipient of several awards including ONR Young Investigator Award, PAMI Young Research Award,
+        Sloan Research Fellowship, Okawa Foundation Grant, Bosch Young Faculty Fellowship, YPO Fellowship,  IJCAI Early
+        Career Spotlight, ICRA Best Student Paper award, and the ECCV Best Paper Runner-up Award. His research has also
+        been featured in Newsweek, BBC, Wall Street Journal, Wired and Slashdot.
+      </div>
+    </div>
+    <br />
+
+    <!-- Chelsea Finn -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+          <div class="instructor">
+            <div class="instructorphoto"><img src="images/chelsea-finn.jpg"></div>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <b><a href="https://ai.stanford.edu/~cbfinn/" target="_blank">Chelsea Finn</a></b>
+        is an Assistant Professor in Computer Science and Electrical Engineering at Stanford University. Finn's research
+        interests lie in the ability to enable robots and other agents to develop broadly intelligent behavior through
+        learning and interaction. To this end, Finn has developed deep learning algorithms for concurrently learning
+        visual perception and control in robotic manipulation skills, inverse reinforcement methods for scalable
+        acquisition of nonlinear reward functions, and meta-learning algorithms that can enable fast, few-shot
+        adaptation in both visual perception and deep reinforcement learning. Finn received her Bachelors degree in
+        Electrical Engineering and Computer Science at MIT and her PhD in Computer Science at UC Berkeley. Her research
+        has been recognized through the ACM doctoral dissertation award, an NSF graduate fellowship, a Facebook
+        fellowship, the C.V. Ramamoorthy Distinguished Research Award, and the MIT Technology Review 35 under 35 Award,
+        and her work has been covered by various media outlets, including the New York Times, Wired, and Bloomberg. With
+        Sergey Levine and John Schulman, Finn also designed and taught a course on deep reinforcement learning, with
+        thousands of followers online. Throughout her career, she has sought to increase the representation of
+        underrepresented minorities within CS and AI by developing an AI outreach camp at Berkeley for underprivileged
+        high school students, a mentoring program for underrepresented undergraduates across three universities, and
+        leading efforts within the WiML and Berkeley WiCSE communities of women researchers.
+      </div>
+    </div>
+    <br />
+
+    <!-- Animesh Garg -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+          <div class="instructor">
+            <div class="instructorphoto"><img src="images/animesh-garg.jpg"></div>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <b><a href="https://www.cs.toronto.edu/~garg/" target="_blank">Animesh Garg</a></b>
+        is a Assistant Professor of Computer Science at University of Toronto and a Faculty Member at the Vector
+        Institute. He leads the Toronto People, AI and Robotics (PAIR) research group. He is affiliated with Mechanical
+        and Industrial Engineering (courtesy) and Toronto Robotics Institute. He also shares time as a senior research
+        scientist at Nvidia in ML and Robotics. Prior to this, he was a postdoc at Stanford AI Lab working with Fei-Fei
+        Li and Silvio Savarese. He received MS in Computer Science and Ph.D. in Operations Research from the UC,
+        Berkeley in 2016. He was advised by Ken Goldberg in the Automation Lab as a part of the Berkeley AI Research Lab
+        (BAIR). He also worked closely with Pieter Abbeel, Alper Atamturk and UCSF Radiation Oncology.
+      </div>
+    </div>
+    <br />
+
+    <!-- Angjoo Kanazawa -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+          <div class="instructor">
+            <div class="instructorphoto"><img src="images/angjoo-kanazawa.jpg"></div>
+          </div>
+      </div>
+      <div class="col-xs-12 col-sm-9">
+        <b><a href="https://people.eecs.berkeley.edu/~kanazawa/" target="_blank">Angjoo Kanazawa</a></b>
+        will be starting as an Assistant Professor at UC Berkeley from Fall 2020. She is a research scientist at Google
+        NYC. Previously, she was a BAIR postdoc at UC Berkeley advised by Jitendra Malik, Alexei A. Efros and Trevor
+        Darrell. She completed her PhD in CS at the University of Maryland, College Park with her advisor David Jacobs.
+        Prior to UMD, she spent four years at NYU where she worked with Rob Fergus and completed her BA in Mathematics
+        and Computer Science.
+      </div>
+    </div>
+    <br />
+
+    <hr />
+
+    <!-- Call for Papers -->
+    <p><a class="anchor" id="papers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Call for Papers</h2>
+        <p>This workshop aims to bring together researchers from both academia and industry interested in addressing
+          various aspects of compositional understanding in computer vision. The domains include but are not limited to
+          scene understanding, video analysis, 3D vision and robotics. For each of these domains, we will discuss the
+          following topics:
+        </p>
+        <ul>
+          <li><b>Algorithmic approaches</b>: How should we develop and improve representations of compositionality for
+            learning, such as graph embedding, message-passing neural networks, probabilistic models, etc.?</li>
+          <li><b>Evaluation methods</b>: What are the convincing metrics to measure the robustness, generalizability,
+            and accuracy of compositional understanding algorithms?</li>
+          <li><b>Cognitive aspects</b>: How would cognitive science research inspire computational model to capture
+            compositionality as humans do?</li>
+          <li><b>Optimization and scalability challenges</b>: How should we handle the inherent representations of
+            different components and curse of dimensionality of graph-based data? How should we effectively collect
+            large-scale databases for training multi-tasking models?</li>
+          <li><b>Domain-specific applications</b>: How should we improve scene graph generation,
+            spatio-temporal-graph-based action recognition, structural 3D recognition and reconstruction,
+            meta-learning, reinforcement learning, etc.?</li>
+          <li>Any other topic of interest for compositionality in computer vision.</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Submission -->
+    <p><a class="anchor" id="submission"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Submission</h2>
+        <p class="important">Submit in this CMT portal: <a href="http://cmt3.research.microsoft.com/CICV2020">cmt3.research.microsoft.com/CICV2020</a></p>
+        <p>We provide three submission tracks, please submit to your desired one:
+        </p>
+        <ul>
+          <li>
+            <b>Archival full paper track.</b> The length limit is <b>4 - 8 pages excluding references</b>. The format is the same as
+            CVPR'20 main conference submission
+            (<a href="http://cvpr2020.thecvf.com/sites/default/files/2019-09/cvpr2020AuthorKit.zip">template</a>).
+            Accepted papers in this track will be published in CVPR workshop proceedings and IEEE Xplore. These papers
+            will also be in the CVF open access archive.
+          </li>
+          <li>
+            <b>Non-archival short paper track.</b> The length limit is <b>4 pages including references</b>. The format is the same
+            as CVPR'20 main conference submission
+            (<a href="http://cvpr2020.thecvf.com/sites/default/files/2019-09/cvpr2020AuthorKit.zip">template</a>) but
+            shorter in length. Accepted papers in this track will NOT be published in CVPR workshop proceedings but
+            public on this workshop website. Note that accepted papers in this non-archival short paper track will not
+            conflict with <a href="https://eccv2020.eu/author-instructions/">the dual submission policy of ECCV'20</a>.
+          </li>
+          <li>
+            <b>Non-archival long paper track.</b> This track is only for previously published papers or papers
+            to appear on CVPR'20 main conference. There is no page limit. Accepted papers in this track will NOT be
+            published in CVPR workshop proceedings.
+          </li>
+        </ul>
+        <p>
+          The submission deadline for all tracks has been extended to <b>April 3rd, 2020 at 11:59 pm PST</b> due to COVID-19 situation.
+          Author notification will be sent out on April 10th, 2020. Camera ready due is April 18th, 2020.
+        </p>
+        <p>
+          All accepted papers will be required for poster presentation. Oral presentations will be selected from the
+          accepted papers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Organizers -->
+    <p><a class="anchor" id="organizers"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Organizers</h2>
+        <div>
+          <div class="instructor">
+            <a href="https://profiles.stanford.edu/jingwei-ji" target="_blank">
+              <div class="instructorphoto"><img src="https://cs.stanford.edu/people/jingweij/images/jingwei_100x100.png"></div>
+              <div>Jingwei Ji</div>
+            </a>
+          </div>
+          <div class="instructor">
+            <a href="https://ranjaykrishna.com" target="_blank">
+              <div class="instructorphoto"><img src="https://cs.stanford.edu/people/ranjaykrishna/images/ranjay.png"></div>
+              <div>Ranjay Krishna</div>
+            </a>
+          </div>
+          <div class="instructor">
+            <a href="https://stanford.edu/~eadeli/" target="_blank">
+              <div class="instructorphoto"><img src="https://stanford.edu/~eadeli/images/MyPhoto03.jpg"></div>
+              <div>Ehsan Adeli</div>
+            </a>
+          </div>
+          <br />
+          <br />
+          <div class="instructor">
+            <a href="https://www.niebles.net/" target="_blank">
+              <div class="instructorphoto"><img src="https://www.niebles.net/images/jcbwcircle.jpg"></div>
+              <div>Juan Carlos Niebles</div>
+            </a>
+          </div>
+          <div class="instructor">
+            <a href="https://www.cs.princeton.edu/~olgarus/index.html" target="_blank">
+              <div class="instructorphoto"><img src="https://visualai.princeton.edu/photos/OlgaRussakovsky.jpg"></div>
+              <div>Olga Russakovsky</div>
+            </a>
+          </div>
+          <div class="instructor">
+            <a href="https://profiles.stanford.edu/fei-fei-li/" target="_blank">
+              <div class="instructorphoto"><img src="https://cs.stanford.edu/people/karpathy/densecap/feifei2.jpeg"></div>
+              <div>Fei-Fei Li</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class='important'>Please contact Jingwei Ji or Ranjay Krishna with any questions: jingweij / ranjaykrishna [at] cs [dot] stanford [dot] edu.</p>
+    <hr />
+
+    <!-- Important Dates -->
+    <p><a class="anchor" id="dates"></a></p>
+    <div class="row" style="margin-top:30px;">
+      <div class="col-xs-12 col-sm-12">
+        <h2>Important Dates and Details</h2>
+        <ul>
+          <li><b>Signup to receive updates</b>: <s>using <a href='https://forms.gle/kZTP1eqpgs6gzm9x7'>this form</a></s></li>
+          <li><b>Apply to be part of Program Committee by</b>: <s>Feb 15, 2020</s></li>
+          <li><b>Paper submission deadline</b>: <s>Mar 27</s> <s>Apr 3, 2020 at 11:59pm PST. CMT portal: <a href="http://cmt3.research.microsoft.com/CICV2020">cmt3.research.microsoft.com/CICV2020</a></s></li>
+          <li><b>Notification of acceptance</b>: <s>Apr 10, 2020</s></li>
+          <li><b>Camera ready due</b>: <s>April 18, 2020</s></li>
+          <li><b>Workshop date</b>: June 15, 2020</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <!-- Program Committee -->
+    <p><a class="anchor" id="pc"></a></p>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Program Committee</h2>
+        <ul>
+          <li>Shyamal Buch - Stanford University</li>
+          <li>Chien-Yi Chang - Stanford University</li>
+          <li>Apoorva Dornadula - Stanford University</li>
+          <li>Yong-Lu Li - Shanghai Jiao Tong University</li>
+          <li>Bingbin Liu - Carnegie Mellon University</li>
+          <li>Karttikeya Mangalam - University of California, Berkeley</li>
+          <li>Kaichun Mo - Stanford University</li>
+          <li>Samsom Saju - Mindtree</li>
+          <li>Gunnar Sigurdsson - Carnegie Mellon University</li>
+          <li>Paroma Varma - Stanford University</li>
+          <li>Alec Hodgkinson - Panasonic Beta</li>
+          <li>Boxiao Pan - Stanford University</li>
+          <li>Mingzhe Wang - Princeton University</li>
+          <li>Kaidi Cao - Stanford University</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+
+  </div>
+</div>
+
+
+<!-- jQuery and Boostrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
